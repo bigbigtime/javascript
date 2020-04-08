@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*" />
+    <title>手把手撸码前端 javascript学习</title>
+    <link rel="stylesheet" href="css/normalize.css">
+</head>
+<body>
+    <div class="accounts-wrap">
+        <div class="accunts-from-wrap">
+            <form onsubmit="return registerFrom()">
+                <div class="form-item">
+                    <label for="">邮箱：</label>
+                    <div class="input-wrap">
+                        <input type="text" value="" class="input" placeholder="请输入你的邮箱" id="email">
+                    </div>
+                </div>
+                <div class="form-item">
+                    <label for="">密码：</label>
+                    <div class="input-wrap">
+                        <input type="password" value="" class="input" placeholder="请输入你的密码" id="password">
+                    </div>
+                </div>
+                <div class="form-item">
+                    <label for="">重复密码：</label>
+                    <div class="input-wrap">
+                        <input type="password" value="" class="input" placeholder="再次输入密码" id="passwords">
+                    </div>
+                </div>
+                <div class="form-item">
+                    <label for="">验证码：</label>
+                    <div class="input-wrap">
+                        <a href="javascript: void(0);" class="code" onClick="getCode()" id="codeButton">
+                            获取验证码
+                        </a>
+                        <input type="text" value="" class="input" placeholder="6位数的验证码" id="code">
+                    </div>
+                </div>
+                <div class="form-item">
+                    <input type="submit" class="input-submit">
+                </div>
+            </form>
+        </div>
+        <p>
+            <a href="login.html">登录</a>
+        </p>
+    </div>
+    <script src="http://www.web-jshtml.cn/curriculum/javascript/js/global.js"></script>
+</body>
+</html>

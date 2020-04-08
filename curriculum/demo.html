@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>手把手撸码前端 javascript学习</title>
+    <link rel="stylesheet" href="http://www.web-jshtml.cn/curriculum/javascript/css/base.css">
+</head>
+<body>
+    <a href="index.html" class="demo">开发</a>
+    <header></header>
+    <div id="container-wrap">
+        <div class="header-wrap clearfix">
+            <div class="filter-warp pull-left">
+                <span class="item">筛选：</span>
+                <div class="item">
+                    <a href="" class="menu-button">国籍</a>
+                    <div class="dialog">
+                        <div class="box">
+                            <ul class="letter-list">
+                                <li>A</li>
+                                <li>B</li>
+                                <li>C</li>
+                                <li>D</li>
+                                <li>E</li>
+                                <li>F</li>
+                                <li>G</li>
+                                <li>H</li>
+                                <li>I</li>
+                                <li>J</li>
+                                <li>K</li>
+                                <li>L</li>
+                                <li>M</li>
+                                <li>N</li>
+                                <li>O</li>
+                                <li>P</li>
+                                <li>Q</li>
+                                <li>R</li>
+                                <li>S</li>
+                                <li>T</li>
+                                <li>U</li>
+                                <li>V</li>
+                                <li>W</li>
+                                <li>X</li>
+                                <li>Y</li>
+                                <li>Z</li>
+                            </ul>
+                            <div class="country-scroll">
+                                <ul class="country-list">
+                                    <li><a>阿富汗</a></li>
+                                    <li><a>奥兰群岛</a></li>
+                                    <li><a>阿尔巴尼亚</a></li>
+                                    <li><a>阿尔及利亚</a></li>
+                                    <li><a>美属萨摩亚</a></li>
+                                    <li><a>安道尔</a></li>
+                                    <li><a class="current">安哥拉</a></li>
+                                    <li><a>安圭拉</a></li>
+                                    <li><a>南极洲</a></li>
+                                    <li><a>安提瓜和巴布达</a></li>
+                                    <li><a>阿根廷</a></li>
+                                    <li><a>亚美尼亚</a></li>
+                                    <li><a>阿鲁巴</a></li>
+                                    <li><a>澳大利亚</a></li>
+                                    <li><a>阿富汗</a></li>
+                                    <li><a>奥兰群岛</a></li>
+                                    <li><a>阿尔巴尼亚</a></li>
+                                    <li><a>阿尔及利亚</a></li>
+                                    <li><a>美属萨摩亚</a></li>
+                                    <li><a>安道尔</a></li>
+                                    <li><a class="current">安哥拉</a></li>
+                                    <li><a>安圭拉</a></li>
+                                    <li><a>南极洲</a></li>
+                                    <li><a>安提瓜和巴布达</a></li>
+                                    <li><a>阿根廷</a></li>
+                                    <li><a>亚美尼亚</a></li>
+                                    <li><a>阿鲁巴</a></li>
+                                    <li><a>澳大利亚</a></li>
+                                </ul>
+                            </div>
+                            <div class="country-filter clearfix">
+                                <input type="text" placeholder="输入国家名称，快捷搜索" class="pull-right">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pull-right">
+                <div class="search-wrap">
+                    <form>
+                        <select>
+                            <option value="name">姓名</option>
+                            <option value="name">年龄</option>
+                            <option value="name">手机号</option>
+                            <option value="name">国籍</option>
+                            <option value="name">头衔</option>
+                            <option value="name">爱好</option>
+                        </select>
+                        <input type="text">
+                        <input type="submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" id="table-data-wrap">
+            <thead>
+                <tr>
+                    <th>头像</th>
+                    <th>姓名</th>
+                    <th>性别</th>
+                    <th>年龄</th>
+                    <th>手机号</th>
+                    <th>国籍</th>
+                    <th width="200">爱好</th>
+                    <th>头衔</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="face">
+                            <span class="gender icon-boy"></span>
+                            <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1583671638490&di=957e858d102bae600e6b5472843bdfe6&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201802%2F20%2F20180220165946_RiGPS.thumb.700_0.jpeg" alt="">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="people-name">
+                            <h4 class="name">小龙女</h4>
+                            <span class="nickname option-05 fs-12">昵称：夏末的晨曦</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="gender-wrap">
+                            <span class="gender icon-girl"></span>
+                            <span class="gender icon-boy option-05"></span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="age text-center">
+                            <p>25</p>
+                            <span class="option-05 fs-12">（单身狗）</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="phone">
+                            +86<span class="option-05">（中国）</span><br />
+                            13588888888
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <img src="http://www.web-jshtml.cn/curriculum/javascript/images/china.jpg" alt="中国">
+                            <p class="country-name" style="color: red;">中国</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="likes">
+                            <span style="background-color: #468d9c;">跑步</span>
+                            <span style="background-color: #469c4e;">看电影</span>
+                            <span style="background-color: #9c468b;">二次元</span>
+                            <span style="background-color: #9c4646;">小猫小狗</span>
+                            <span style="background-color: #b9af10;">小说</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="grade">
+                            <span class="role-name">小白</span>
+                            <div class="grade-wrap icon-grade">
+                                <div class="grade-high icon-grade" style="width: 33.33332%;"></div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="operation">
+                            <a href="javascript: void(0);" class="operation-btn">设置</a>
+                            <ul class="links">
+                                <a href="javascript: void(0);">编辑</a>
+                                <a href="javascript: void(0);">删除</a>
+                                <a href="javascript: void(0);">锁定</a>
+                                <a href="javascript: void(0);">收起</a>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="face">
+                            <span class="gender icon-boy"></span>
+                            <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1583671638490&di=957e858d102bae600e6b5472843bdfe6&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201802%2F20%2F20180220165946_RiGPS.thumb.700_0.jpeg" alt="">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="people-name">
+                            <h4 class="name">小龙女</h4>
+                            <span class="nickname option-05 fs-12">昵称：夏末的晨曦</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="gender-wrap">
+                            <span class="gender icon-girl"></span>
+                            <span class="gender icon-boy option-05"></span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="age text-center">
+                            <p>25</p>
+                            <span class="option-05 fs-12">（单身狗）</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="phone">
+                            +86<span class="option-05">（中国）</span><br />
+                            13588888888
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <img src="http://www.web-jshtml.cn/curriculum/javascript/images/china.jpg" alt="中国">
+                            <p class="country-name" style="color: red;">中国</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="likes">
+                            <span style="background-color: #468d9c;">跑步</span>
+                            <span style="background-color: #469c4e;">看电影</span>
+                            <span style="background-color: #9c468b;">二次元</span>
+                            <span style="background-color: #9c4646;">小猫小狗</span>
+                            <span style="background-color: #b9af10;">小说</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="grade">
+                            <span class="role-name">小白</span>
+                            <div class="grade-wrap icon-grade">
+                                <div class="grade-high icon-grade" style="width: 33.33332%;"></div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="operation">
+                            <a href="javascript: void(0);" class="operation-btn">设置</a>
+                            <ul class="links">
+                                <a href="javascript: void(0);">编辑</a>
+                                <a href="javascript: void(0);">删除</a>
+                                <a href="javascript: void(0);">锁定</a>
+                                <a href="javascript: void(0);">收起</a>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="face">
+                            <span class="gender icon-boy"></span>
+                            <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1583671638490&di=957e858d102bae600e6b5472843bdfe6&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201802%2F20%2F20180220165946_RiGPS.thumb.700_0.jpeg" alt="">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="people-name">
+                            <h4 class="name">小龙女</h4>
+                            <span class="nickname option-05 fs-12">昵称：夏末的晨曦</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="gender-wrap">
+                            <span class="gender icon-girl"></span>
+                            <span class="gender icon-boy option-05"></span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="age text-center">
+                            <p>25</p>
+                            <span class="option-05 fs-12">（单身狗）</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="phone">
+                            +86<span class="option-05">（中国）</span><br />
+                            13588888888
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <img src="http://www.web-jshtml.cn/curriculum/javascript/images/china.jpg" alt="中国">
+                            <p class="country-name" style="color: red;">中国</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="likes">
+                            <span style="background-color: #468d9c;">跑步</span>
+                            <span style="background-color: #469c4e;">看电影</span>
+                            <span style="background-color: #9c468b;">二次元</span>
+                            <span style="background-color: #9c4646;">小猫小狗</span>
+                            <span style="background-color: #b9af10;">小说</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="grade">
+                            <span class="role-name">小白</span>
+                            <div class="grade-wrap icon-grade">
+                                <div class="grade-high icon-grade" style="width: 33.33332%;"></div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="operation">
+                            <a href="javascript: void(0);" class="operation-btn">设置</a>
+                            <ul class="links">
+                                <a href="javascript: void(0);">编辑</a>
+                                <a href="javascript: void(0);">删除</a>
+                                <a href="javascript: void(0);">锁定</a>
+                                <a href="javascript: void(0);">收起</a>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="face">
+                            <span class="gender icon-boy"></span>
+                            <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1583671638490&di=957e858d102bae600e6b5472843bdfe6&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201802%2F20%2F20180220165946_RiGPS.thumb.700_0.jpeg" alt="">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="people-name">
+                            <h4 class="name">小龙女</h4>
+                            <span class="nickname option-05 fs-12">昵称：夏末的晨曦</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="gender-wrap">
+                            <span class="gender icon-girl"></span>
+                            <span class="gender icon-boy option-05"></span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="age text-center">
+                            <p>25</p>
+                            <span class="option-05 fs-12">（单身狗）</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="phone">
+                            +86<span class="option-05">（中国）</span><br />
+                            13588888888
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <img src="http://www.web-jshtml.cn/curriculum/javascript/images/china.jpg" alt="中国">
+                            <p class="country-name" style="color: red;">中国</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="likes">
+                            <span style="background-color: #468d9c;">跑步</span>
+                            <span style="background-color: #469c4e;">看电影</span>
+                            <span style="background-color: #9c468b;">二次元</span>
+                            <span style="background-color: #9c4646;">小猫小狗</span>
+                            <span style="background-color: #b9af10;">小说</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="grade">
+                            <span class="role-name">小白</span>
+                            <div class="grade-wrap icon-grade">
+                                <div class="grade-high icon-grade" style="width: 33.33332%;"></div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="operation">
+                            <a href="javascript: void(0);" class="operation-btn">设置</a>
+                            <ul class="links">
+                                <a href="javascript: void(0);">编辑</a>
+                                <a href="javascript: void(0);">删除</a>
+                                <a href="javascript: void(0);">锁定</a>
+                                <a href="javascript: void(0);">收起</a>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="face">
+                            <span class="gender icon-boy"></span>
+                            <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1583671638490&di=957e858d102bae600e6b5472843bdfe6&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201802%2F20%2F20180220165946_RiGPS.thumb.700_0.jpeg" alt="">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="people-name">
+                            <h4 class="name">小龙女</h4>
+                            <span class="nickname option-05 fs-12">昵称：夏末的晨曦</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="gender-wrap">
+                            <span class="gender icon-girl"></span>
+                            <span class="gender icon-boy option-05"></span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="age text-center">
+                            <p>25</p>
+                            <span class="option-05 fs-12">（单身狗）</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="phone">
+                            +86<span class="option-05">（中国）</span><br />
+                            13588888888
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <img src="http://www.web-jshtml.cn/curriculum/javascript/images/china.jpg" alt="中国">
+                            <p class="country-name" style="color: red;">中国</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="likes">
+                            <span style="background-color: #468d9c;">跑步</span>
+                            <span style="background-color: #469c4e;">看电影</span>
+                            <span style="background-color: #9c468b;">二次元</span>
+                            <span style="background-color: #9c4646;">小猫小狗</span>
+                            <span style="background-color: #b9af10;">小说</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="grade">
+                            <span class="role-name">小白</span>
+                            <div class="grade-wrap icon-grade">
+                                <div class="grade-high icon-grade" style="width: 33.33332%;"></div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="operation">
+                            <a href="javascript: void(0);" class="operation-btn">设置</a>
+                            <ul class="links">
+                                <a href="javascript: void(0);">编辑</a>
+                                <a href="javascript: void(0);">删除</a>
+                                <a href="javascript: void(0);">锁定</a>
+                                <a href="javascript: void(0);">收起</a>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="pagination">
+            <span>上一页</span>
+            <a href="javascript: void(0);" class="current">1</a>
+            <a href="javascript: void(0);">2</a>
+            <a href="javascript: void(0);">3</a>
+            <a href="javascript: void(0);">4</a>
+            <a href="javascript: void(0);">5</a>
+            <span>下一页</span>
+        </div>
+    </div>
+    
+</body>
+</html>
