@@ -35,3 +35,19 @@ tbodyHtml += `${createTbodyData()}</tbody>`;
 tableDom.innerHTML = theadHtml + tbodyHtml;
 // 添加到页面
 divDom.appendChild(tableDom);
+
+
+/**
+ * ****************************************************************************************
+ */
+const addInfoButton = window.Azong.getClassName('add-info-button')[0];
+const infoDialog = window.Azong.$('info-dialog');
+const closeDialog = document.querySelector('.close-dialog');
+
+window.Azong.addEvent(addInfoButton, 'click', function(){
+    infoDialog.classList.add('dialog-show');
+});
+
+window.Azong.addEvent(closeDialog, 'click', function(){
+    infoDialog.classList.remove('dialog-show');
+});

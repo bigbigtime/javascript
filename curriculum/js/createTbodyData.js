@@ -1,37 +1,6 @@
 /**
  * 主体数据
  */
-// 操作DOM元素  两位到三位数  524
-const bodyDom = document.getElementsByTagName('body')[0];
-
-// for(let i = 0; i < 50000; i++) {
-//     const div = document.createElement('div');
-//     div.innerHTML = i;
-//     bodyDom.appendChild(div);
-//     //不要创建一个对象，就塞一个对象
-// }
-
-
-
-// 连接字符串  个位数  34  
-let htmlDom = ``;
-let timeStart = (new Date()).getTime();
-for(let i = 0; i < 50000; i++){
-    htmlDom += `<div>${i}</div>`;
-}
-let timeEnd = (new Date()).getTime();
-console.log(timeStart)
-console.log(timeEnd)
-console.group(timeEnd - timeStart)
-bodyDom.innerHTML = bodyDom.innerHTML + htmlDom;
-
-
-
-
-
-
-
-
 function createTbodyData(){
     let trHtml = ``;
     for(let i = 0; i < tableTbodyData.length; i++) { // 块级作用域，子级作用域可以访问父级作用域的变量

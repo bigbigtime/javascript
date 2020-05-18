@@ -16,6 +16,15 @@
     window.Azong.$ = $;
 
     /**
+     * 获取 className 对象
+     * @param {strong} node 
+     */
+    function getClassName(className){
+        return document.getElementsByClassName(className);  // 数组
+    }
+    window.Azong.getClassName = getClassName;
+    
+    /**
      * 创建元素
      */
     function createEl(node){
@@ -41,6 +50,30 @@
         return node.getAttribute(attr);
     }
     window.Azong.getAttr = getAttr;
+
+    /**
+     * addEventListener 方法
+     */
+    function addEvent(domNode, eventType, handlerFunction){
+        if(window.addEventListener){
+            domNode.addEventListener(eventType, handlerFunction);
+        }else{
+            domNode.attachEvent(`on${eventType}`, handlerFunction);
+        }
+    }
+    window.Azong.addEvent = addEvent;
+
+    /**
+     * removeEventListener 方法
+     */
+    function removeEvent(domNode, eventType, handlerFunction){
+        if(window.removeEventListener){
+            domNode.removeEventListener(eventType, handlerFunction);
+        }else{
+            domNode.detachEvent(`on${eventType}`, handlerFunction);
+        }
+    }
+    window.Azong.removeEvent = removeEvent;
 
 })()
 

@@ -9,9 +9,6 @@
 <body>
     <a href="demo.html" class="demo">项目</a>
     <header></header>
-    <div id="aaa"></div>
-    <div id="bbb"></div>
-    <div id="ccc"></div>
     <div id="container-wrap">
         <div class="header-wrap clearfix">
             <div class="filter-warp pull-left">
@@ -38,6 +35,152 @@
             </div>
         </div>
         <div id="table-data-wrap"></div>
+    </div>
+    <div class="button-fixed">
+        <span class="button">
+            <i class="icon"></i>
+        </span>
+        <ul>
+            <li><a href="javascript: void(0);" class="menu-button button add-info-button">添加信息</a></li>
+        </ul>
+    </div>
+    <div id="info-dialog">  <!-- 追加类名 dialog-show -->
+        <div class="form-content">
+            <a href="javascript: void(0);" class="close-dialog">×</a>
+            <form>
+                <div class="form-item">
+                    <label>头像：</label>
+                    <div class="wrap">
+                        <div class="form-face clearfix">
+                            <div class="face-view">
+                                <img src="http://www.web-jshtml.cn//curriculum/javascript/images/face/001.jpg" alt="">
+                                <a href="javascript: void(0);" class="face-del">×</a>
+                            </div>
+                            <ul class="face-view-list">
+                                <li><img src="http://www.web-jshtml.cn//curriculum/javascript/images/face/001.jpg" alt=""></li>
+                                <li><img src="http://www.web-jshtml.cn//curriculum/javascript/images/face/002.jpg" alt=""></li>
+                                <li><img src="http://www.web-jshtml.cn//curriculum/javascript/images/face/003.jpg" alt=""></li>
+                                <li><img src="http://www.web-jshtml.cn//curriculum/javascript/images/face/004.jpg" alt=""></li>
+                                <li><img src="http://www.web-jshtml.cn//curriculum/javascript/images/face/005.jpg" alt=""></li>
+                                <li><img src="http://www.web-jshtml.cn//curriculum/javascript/images/face/006.jpg" alt=""></li>
+                                <li><img src="http://www.web-jshtml.cn//curriculum/javascript/images/face/001.jpg" alt=""></li>
+                                <li><img src="http://www.web-jshtml.cn//curriculum/javascript/images/face/001.jpg" alt=""></li>
+                                <li><img src="http://www.web-jshtml.cn//curriculum/javascript/images/face/001.jpg" alt=""></li>
+                                <li><img src="http://www.web-jshtml.cn//curriculum/javascript/images/face/001.jpg" alt=""></li>
+                                <li><img src="http://www.web-jshtml.cn//curriculum/javascript/images/face/001.jpg" alt=""></li>
+                                <li><img src="http://www.web-jshtml.cn//curriculum/javascript/images/face/001.jpg" alt=""></li>
+                                <li><img src="http://www.web-jshtml.cn//curriculum/javascript/images/face/001.jpg" alt=""></li>
+                                <li><img src="http://www.web-jshtml.cn//curriculum/javascript/images/face/001.jpg" alt=""></li>
+                                <li><img src="http://www.web-jshtml.cn//curriculum/javascript/images/face/001.jpg" alt=""></li>
+                                <li><img src="http://www.web-jshtml.cn//curriculum/javascript/images/face/001.jpg" alt=""></li>
+                                <li><img src="http://www.web-jshtml.cn//curriculum/javascript/images/face/001.jpg" alt=""></li>
+                                <li><img src="http://www.web-jshtml.cn//curriculum/javascript/images/face/001.jpg" alt=""></li>
+                                <li><img src="http://www.web-jshtml.cn//curriculum/javascript/images/face/001.jpg" alt=""></li>
+                                <li><img src="http://www.web-jshtml.cn//curriculum/javascript/images/face/001.jpg" alt=""></li>
+                                <li><img src="http://www.web-jshtml.cn//curriculum/javascript/images/face/001.jpg" alt=""></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-item">
+                    <label><span>姓名：</span></label>
+                    <div class="wrap">
+                        <div class="form-control">
+                            <input type="text" class="input">
+                        </div>
+                        <div class="form-sex">
+                            <div class="gender-wrap">
+                                <span class="gender icon-girl option-05">
+                                    <input type="radio" value="1">
+                                </span>
+                                <span class="gender icon-boy option-05">
+                                    <input type="radio" value="2">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-item">
+                    <label>昵称：</label>
+                    <div class="wrap">
+                        <div class="form-control">
+                            <input type="text" class="input">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-item">
+                    <label>年龄：</label>
+                    <div class="wrap">
+                        <div class="form-control">
+                            <input type="text" class="input">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-item">
+                    <label>电话：</label>
+                    <div class="wrap">
+                        <div class="form-control w-auto">
+                            <select class="select">
+                                <option value="+86"> +86 </option>
+                                <option></option>
+                                <option></option>
+                            </select>
+                        </div>
+                        <div class="form-control">
+                            <input type="text" class="input">
+                        </div>
+                        <div class="form-country">
+                            <img src="http://www.web-jshtml.cn/curriculum/javascript/images/china.jpg" alt="中国">
+                            <span class="form-country-name" style="color: red;">中国</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-item">
+                    <label>爱好：</label>
+                    <div class="wrap">
+                        <ul class="links-list display-ib">
+                            <li style="background-color: #468d9c;">
+                                <span>跑步</span>
+                                <a href="javascript: void(0);">×</a>
+                            </li>
+                            <li>
+                                <span>跑步</span>
+                                <a href="javascript: void(0);">×</a>
+                            </li>
+                            <li>
+                                <span>跑步</span>
+                                <a href="javascript: void(0);">×</a>
+                            </li>
+                            <li>
+                                <span>跑步</span>
+                                <a href="javascript: void(0);">×</a>
+                            </li>
+                        </ul>
+                        <div class="add-item-wrap display-ib pr"> <!-- 追加add-show 显示输入框-->
+                            <div class="form-control">
+                                <input type="text" class="input" placeholder="Enter键确认">
+                            </div>
+                            <button>+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-item">
+                    <label>头衔：</label>
+                    <div class="wrap">
+                        <div class="grade">
+                            <div class="form-grade grade-wrap icon-grade">
+                                <div class="grade-high icon-grade" style="width: 33.33332%;"></div>
+                            </div>
+                            <span class="role-name">小白</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-item">
+                    <label>&nbsp;</label>
+                    <button type="submit" class="form-submit-button">确定</button>
+                </div>
+            </form>
+        </div>
     </div>
     <script src="js/Azong.js"></script>
     <script src="js/dataTable.js"></script>
