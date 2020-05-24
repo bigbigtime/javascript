@@ -1,20 +1,4 @@
 "use strict";  // 严格模式
-// 获取 DIV
-const divDom = window.Azong.$('container-wrap');  // 获取元素
-// 固定语法
-const tableDom = window.Azong.createEl('table');  // 创建元素
-// 获取添加信息按钮对象
-const addInfoButton = window.Azong.getClassName('add-info-button')[0];
-// 获取form 弹窗对象
-const infoDialog = window.Azong.$('info-dialog');
-// 获取 form 弹窗关闭按钮对象
-const closeDialog = document.querySelector('.close-dialog');
-// 获取头像区域
-const faceView = window.Azong.getClassName('face-view')[0];
-// 获取头像列表区域
-const faceViewList = document.querySelector('.face-view-list');
-
-
 
 window.Azong.setAttr(tableDom, {
     'border': '0',
@@ -64,11 +48,13 @@ window.Azong.addEvent(closeDialog, 'click', function(){
  * ****** 头像事件处理 **********************************************************************************
  */
 window.Azong.addEvent(faceView, 'click', function(){
+    // 请求接口
     handlerFaceList();
 });
 window.Azong.addEvent(faceViewList, 'click', function(e){
+    const ev = e || window.event;
     // 获取标签
-    let nodeName = e.target.nodeName.toLowerCase();
+    let nodeName = ev.target.nodeName.toLowerCase();
     // 获取img对象
     const getImg = window.Azong.getTagName(faceView, 'img');  // 数组
     // 创建img对象
@@ -77,29 +63,66 @@ window.Azong.addEvent(faceViewList, 'click', function(e){
     let getSrc = ``;
     // 更新src
     if(nodeName === 'li') {
-        const img = window.Azong.getChildren(e.target)[0];
+        const img = window.Azong.getChildren(ev.target)[0];
         getSrc = img.src;
     }
     if(nodeName === 'img') { 
-        getSrc = e.target.src;
+        getSrc = ev.target.src;
     }
-    // 头像存在，则修改头像的src
-    if(getImg.length !== 0) {
-        getImg[0].src = getSrc;
-    }else{
-        // img写入src
-        createImg.src = getSrc;
-        window.Azong.addChild(faceView, createImg);
-    }
+    // 无论是添加还是删除，都只是地img对象进行操作
+    // 更新头像
+    // faceUpdate(getImg, createImg, getSrc, "add");
+    // es5
+    // faceUpdate({
+    //     type: "add",
+    //     gImg: getImg,
+    //     cImg: createImg,
+    //     src: getSrc
+    // });
+    // es6
+    faceUpdate({ // 对象的 key 和 value 是相同的情况下，用一个参数就可以。
+        type: "add",
+        getImg,
+        createImg,
+        getSrc,
+    });
 });
 
-function handlerFaceListCallback(data){
-    const requestData = data.data;
-    // for of
-    let liHtml = ``;
-    for(let key of requestData) {
-        liHtml += `<li><img src="${key}" alt=""></li>`
-    }
-    faceViewList.innerHTML = liHtml;
-}
+window.Azong.addEvent(faceDelButton, 'click', function(e){
+    const ev = e || window.event;
+    // 获取img对象
+    const getImg = window.Azong.getTagName(faceView, 'img')[0];  // 数组
+    // 更新头像
+    faceUpdate({
+        type: "del",
+        getImg
+    });
+    // 阻止事件冒泡
+    ev.stopPropagation && (ev.stopPropagation() || (ev.cancelBubble = true));
+})
 
+
+
+/**
+ * 事件冒泡
+ */
+// const div1 = document.getElementById("div1")
+// const div2 = document.getElementById("div2")
+// const div3 = document.getElementById("div3")
+
+// window.Azong.addEvent(div1, 'click', function(){
+//     console.group("div1");
+// }, true)
+// window.Azong.addEvent(div2, 'click', function(){
+//     console.group("div2");
+// }, true)
+// window.Azong.addEvent(div3, 'click', function(e){
+//     const ev = e || window.event;
+//     // 阻止事件冒泡
+//     if(ev.stopPropagation){
+//         ev.stopPropagation()
+//     }else{
+//         ev.cancelBubble = true;  // IE浏览器 11以下版本
+//     }
+//     console.group("div3");
+// }, true)

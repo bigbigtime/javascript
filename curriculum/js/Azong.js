@@ -75,11 +75,11 @@
     /**
      * addEventListener 方法
      */
-    function addEvent(domNode, eventType, handlerFunction){
+    function addEvent(domNode, eventType, handlerFunction, cap){ 
         if(window.addEventListener){
-            domNode.addEventListener(eventType, handlerFunction);
+            domNode.addEventListener(eventType, handlerFunction, cap);
         }else{
-            domNode.attachEvent(`on${eventType}`, handlerFunction);
+            domNode.attachEvent(`on${eventType}`, handlerFunction, cap);
         }
     }
     window.Azong.addEvent = addEvent;
