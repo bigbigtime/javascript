@@ -42,14 +42,16 @@
     }
     window.Azong.getChildren = getChildren;
 
-
-
-    
     /**
      * 创建元素
      */
-    function createEl(node){
-        return document.createElement(node);
+    function createEl(node, attr){
+        const dom = document.createElement(node);
+        // 判断属性是否存在
+        if(attr) {
+            Azong.setAttr(dom, attr)
+        }
+        return dom;
     }
     window.Azong.createEl = createEl;
 

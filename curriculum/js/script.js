@@ -61,24 +61,20 @@ window.Azong.addEvent(faceViewList, 'click', function(e){
     const createImg = window.Azong.createEl('img');
     // 点击获取src
     let getSrc = ``;
+    // 清除头像高光
+    if(faceSave) { faceSave.classList.remove("active"); }  // 清除上一次对象的样工
     // 更新src
     if(nodeName === 'li') {
         const img = window.Azong.getChildren(ev.target)[0];
         getSrc = img.src;
+        // 存储头像 li 标签
+        faceSave = ev.target;
     }
     if(nodeName === 'img') { 
         getSrc = ev.target.src;
+        faceSave = ev.target.parentNode;  // parentNode 父节点
     }
-    // 无论是添加还是删除，都只是地img对象进行操作
-    // 更新头像
-    // faceUpdate(getImg, createImg, getSrc, "add");
-    // es5
-    // faceUpdate({
-    //     type: "add",
-    //     gImg: getImg,
-    //     cImg: createImg,
-    //     src: getSrc
-    // });
+    faceSave.classList.add("active");
     // es6
     faceUpdate({ // 对象的 key 和 value 是相同的情况下，用一个参数就可以。
         type: "add",
@@ -87,7 +83,6 @@ window.Azong.addEvent(faceViewList, 'click', function(e){
         getSrc,
     });
 });
-
 window.Azong.addEvent(faceDelButton, 'click', function(e){
     const ev = e || window.event;
     // 获取img对象
@@ -98,31 +93,25 @@ window.Azong.addEvent(faceDelButton, 'click', function(e){
         getImg
     });
     // 阻止事件冒泡
-    ev.stopPropagation && (ev.stopPropagation() || (ev.cancelBubble = true));
+    if(ev.stopPropagation) {
+        ev.stopPropagation();
+    }else{
+        ev.cancelBubble = true;
+    }
 })
 
 
-
 /**
- * 事件冒泡
+ * ****** 头像事件处理 **********************************************************************************
  */
-// const div1 = document.getElementById("div1")
-// const div2 = document.getElementById("div2")
-// const div3 = document.getElementById("div3")
-
-// window.Azong.addEvent(div1, 'click', function(){
-//     console.group("div1");
-// }, true)
-// window.Azong.addEvent(div2, 'click', function(){
-//     console.group("div2");
-// }, true)
-// window.Azong.addEvent(div3, 'click', function(e){
-//     const ev = e || window.event;
-//     // 阻止事件冒泡
-//     if(ev.stopPropagation){
-//         ev.stopPropagation()
-//     }else{
-//         ev.cancelBubble = true;  // IE浏览器 11以下版本
-//     }
-//     console.group("div3");
-// }, true)
+inputUsername.onblur = function(){   // 谁绑定方法，this就指向谁
+    // this
+    let value = this.value;
+    if(!value) {
+        window.UI.$message({
+            message: "姓名不能为空",
+            type: "error"
+        });
+        // alert("姓名不能为空");
+    }
+}

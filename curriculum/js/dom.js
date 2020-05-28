@@ -15,3 +15,10 @@ const faceView = window.Azong.getClassName('face-view')[0];
 const faceViewList = document.querySelector('.face-view-list');
 // 获取删除头像按钮
 const faceDelButton = window.Azong.getTagName(faceView, 'a')[0];
+// 头像存储
+let faceSave = null;
+
+/**
+ * ****** input DOM 对象 **********************************************************************************
+ */
+const inputUsername = window.Azong.$('usernameInput');
